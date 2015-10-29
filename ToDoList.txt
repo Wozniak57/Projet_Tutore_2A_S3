@@ -1,0 +1,13 @@
+A FAIRE :
+
+	DAO :
+		- SEANCE
+		- SOUS_GROUPE
+		- ETUDIANT
+		- ABSENT
+	
+	CONTROLEUR
+	Compléter vue
+	
+	Matching ADE <=> Nom matière BdD
+	
