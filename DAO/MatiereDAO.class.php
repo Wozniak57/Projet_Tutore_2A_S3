@@ -35,5 +35,4 @@
 			return $matiere;
 		}
 	}
-	echo "Alexis";
 ?>
