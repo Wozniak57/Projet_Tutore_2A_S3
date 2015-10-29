@@ -1,4 +1,4 @@
-A FAIRE :
+﻿A FAIRE :
 
 	DAO :
 		- SEANCE
@@ -11,3 +11,4 @@ A FAIRE :
 	
 	Matching ADE <=> Nom matière BdD
 	
+	BdD et cardinalités
