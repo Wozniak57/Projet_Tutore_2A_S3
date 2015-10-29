@@ -3,10 +3,12 @@
 	include('DAO\ProfDAO.class.php');
 	include('DAO\CoursDAO.class.php');
 	include('DAO\TypeDAO.class.php');
+	include('DAO\MatiereDAO.class.php');
 	
 	$profdao = new ProfDAO();
 	$coursdao = new CoursDAO();
 	$typedao = new TypeDAO();
+	$matieredao = new MatiereDAO();
 	
 	$ArrayProf = $profdao->getListe();
 	$prof = $profdao->getProfByEmail('Pierre.LAROCHE@aol.fr');
@@ -14,6 +16,7 @@
 	foreach($ArrayCours as $row){
 		
 		$type = $typedao->getTypeByNoTypeOfCours($row->getNo_type());
-		echo $row->getNo_cours() . " " . $prof->getNom() . " " . $type->getNom() . " " . $row->getNo_matiere() . ".</br>";
+		$matiere = $matieredao->getMatiereByNoMatiereOfCours($row->getNo_matiere());
+		echo $row->getNo_cours() . " " . $prof->getNom() . " " . $type->getNom() . " " . $matiere->getInitiales() . ".</br>";
 	}
 ?>

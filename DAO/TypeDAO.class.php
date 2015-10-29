@@ -30,7 +30,6 @@
 			$req = $this->connexion->prepare('SELECT * FROM TYPE WHERE no_type = ?');
 			$req->bindValue(1, $no_type, PDO::PARAM_STR);
 			$req->execute();
-			unset($ArrayType);
 			$row = $req->fetch();
 			$type = new Type($row['no_type'], $row['nom']);
 			return $type;

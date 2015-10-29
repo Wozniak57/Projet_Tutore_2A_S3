@@ -4,7 +4,7 @@
 	class MatiereDAO extends DAO{
 	
 		private $connexion;
-		private $ArrayType = array();
+		private $ArrayMatiere = array();
 		
 		public function __construct(){
 			
@@ -14,26 +14,25 @@
 		
 		public function getListe(){
 			
-			$req = $this->connexion->prepare('SELECT * FROM TYPE');
+			$req = $this->connexion->prepare('SELECT * FROM MATIERE');
 			$req->execute();
-			unset($ArrayType);
+			unset($ArrayMatiere);
 			while($row = $req->fetch()){
 				
-				$type = new Type($row['no_type'], $row['nom']);
-				$ArrayType[] = $type;
+				$matiere = new Matiere($row['no_matiere'], $row['nom'], $row['initiales'], $row['no_module'], $row['no_section']);
+				$ArrayMatiere[] = $matiere;
 			}
-			return $ArrayType;
+			return $ArrayMatiere;
 		}
 		
-		public function getTypeByNoTypeOfCours($no_type){
+		public function getMatiereByNoMatiereOfCours($no_matiere){
 			
-			$req = $this->connexion->prepare('SELECT * FROM TYPE WHERE no_type = ?');
-			$req->bindValue(1, $no_type, PDO::PARAM_STR);
+			$req = $this->connexion->prepare('SELECT * FROM MATIERE WHERE no_matiere = ?');
+			$req->bindValue(1, $no_matiere, PDO::PARAM_STR);
 			$req->execute();
-			unset($ArrayType);
 			$row = $req->fetch();
-			$type = new Type($row['no_type'], $row['nom']);
-			return $type;
+			$matiere = new Matiere($row['no_matiere'], $row['nom'], $row['initiales'], $row['no_module'], $row['no_section']);
+			return $matiere;
 		}
 	}
 ?>
