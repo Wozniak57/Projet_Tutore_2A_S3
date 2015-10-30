@@ -1,7 +1,6 @@
 ﻿A FAIRE :
 
 	DAO :
-		- SEANCE
 		- SOUS_GROUPE
 		- ETUDIANT
 		- ABSENT
