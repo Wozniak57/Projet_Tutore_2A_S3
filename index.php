@@ -1,0 +1,14 @@
+<?php 
+	session_start();
+	
+	if(!empty($_GET['page']) && is_file('controleurs/'.$_GET['page'].'.php')){
+	
+		include 'controleurs/'.$_GET['page'].'.php';
+	}
+	else{
+		
+		include 'Vue/Test.php';
+	}
+	
+	$objPdo = NULL;
+?>
