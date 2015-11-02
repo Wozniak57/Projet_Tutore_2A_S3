@@ -24,10 +24,10 @@
 			return $ArrayCours;
 		}
 		
-		public function getCoursByNoProf($no_prof){
+		public function getCoursByProf($prof){
 			
 			$req = $this->connexion->prepare('SELECT * FROM COURS WHERE no_prof = ?');
-			$req->bindValue(1, $no_prof, PDO::PARAM_STR);
+			$req->bindValue(1, $prof->getNo_prof(), PDO::PARAM_STR);
 			$req->execute();
 			while($row = $req->fetch()){
 				

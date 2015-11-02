@@ -7,7 +7,7 @@
 	}
 	else{
 		
-		include 'Vue/Test.php';
+		include 'Vue/Test2.php';
 	}
 	
 	$objPdo = NULL;
