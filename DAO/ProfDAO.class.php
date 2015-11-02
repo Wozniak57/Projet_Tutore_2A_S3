@@ -16,7 +16,6 @@
 			
 			$req = $this->connexion->prepare('SELECT * FROM PROF');
 			$req->execute();
-			unset($ArrayProf);
 			while($row = $req->fetch()){
 				
 				$prof = new Prof($row['no_prof'], $row['nom'], $row['prenom'], $row['email'], $row['envoi_codes']);

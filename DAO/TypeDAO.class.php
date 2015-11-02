@@ -16,7 +16,6 @@
 			
 			$req = $this->connexion->prepare('SELECT * FROM TYPE');
 			$req->execute();
-			unset($ArrayType);
 			while($row = $req->fetch()){
 				
 				$type = new Type($row['no_type'], $row['nom']);

@@ -16,7 +16,6 @@
 			
 			$req = $this->connexion->prepare('SELECT * FROM SECTION');
 			$req->execute();
-			unset($ArraySection);
 			while($row = $req->fetch()){
 				
 				$section = new Section($row['no_section'], $row['nom'], $row['date_debut'], $row['date_fin']);

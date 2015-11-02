@@ -1,9 +1,4 @@
 ﻿A FAIRE :
-
-	DAO :
-		- SOUS_GROUPE
-		- ETUDIANT
-		- ABSENT
 	
 	CONTROLEUR
 	Compléter vue

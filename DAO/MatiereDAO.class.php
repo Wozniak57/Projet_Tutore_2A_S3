@@ -16,7 +16,6 @@
 			
 			$req = $this->connexion->prepare('SELECT * FROM MATIERE');
 			$req->execute();
-			unset($ArrayMatiere);
 			while($row = $req->fetch()){
 				
 				$matiere = new Matiere($row['no_matiere'], $row['nom'], $row['initiales'], $row['no_module'], $row['no_section']);

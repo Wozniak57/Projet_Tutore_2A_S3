@@ -16,7 +16,6 @@
 			
 			$req = $this->connexion->prepare('SELECT * FROM COURS');
 			$req->execute();
-			unset($ArrayCours);
 			while($row = $req->fetch()){
 				
 				$cours = new Cours($row['no_cours'], $row['no_prof'], $row['no_type'], $row['no_matiere']);
@@ -30,7 +29,6 @@
 			$req = $this->connexion->prepare('SELECT * FROM COURS WHERE no_prof = ?');
 			$req->bindValue(1, $no_prof, PDO::PARAM_STR);
 			$req->execute();
-			unset($ArrayCours);
 			while($row = $req->fetch()){
 				
 				$cours = new Cours($row['no_cours'], $row['no_prof'], $row['no_type'], $row['no_matiere']);
