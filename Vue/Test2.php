@@ -28,7 +28,6 @@
 			foreach($ArrayCours as $row){
 				
 				echo "<button type=\"button\">" . $ArrayMatiere[$i]->getNom() . " " . $ArrayType[$i]->getNom() . "</button>";
-				// $ArrayMatiere[$i]->getNom() . " " . $ArrayType[$i]->getNom()
 				$i++;
 			}
 		?>

@@ -7,7 +7,8 @@
 	}
 	else{
 		
-		include 'Vue/Test2.php';
+		// include 'Vue/Test2.php';
+		include 'Test_ical.php';
 	}
 	
 	$objPdo = NULL;
